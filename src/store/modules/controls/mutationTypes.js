@@ -1,0 +1,2 @@
+export const SET_LEFT_PRESSED = 'SET_LEFT_PRESSED';
+export const SET_RIGHT_PRESSED = 'SET_RIGHT_PRESSED';
