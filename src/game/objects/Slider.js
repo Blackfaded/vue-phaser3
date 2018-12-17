@@ -20,11 +20,19 @@ export default class Slider extends Phaser.GameObjects.Sprite {
     this.body.setAllowGravity(false);
     this.body.setCollideWorldBounds(true);
     this.body.setImmovable(true);
+    this.setInteractive({ draggable: true });
+    this.on('drag', (pointer, dragX) => {
+      this.x = dragX;
+    });
+    console.log(this);
   }
 
   move(value) {
     this.body.setVelocityX(value);
-    return this.body.x;
+  }
+
+  setToPosition(x) {
+    this.x = x;
   }
 
   onBallCollision(ball) {

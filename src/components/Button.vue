@@ -27,5 +27,6 @@ export default {
   box-shadow: 6px 10px 89px 5px rgba(0, 0, 0, 0.75);
   font-size: 33pt;
   letter-spacing: 3pt;
+  margin: 10px 0;
 }
 </style>

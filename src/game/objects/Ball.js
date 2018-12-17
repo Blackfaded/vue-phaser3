@@ -26,7 +26,7 @@ export default class Ball extends Phaser.GameObjects.Sprite {
     this.body.setVelocity(x, y);
   }
 
-  setToPosition(x, y) {
+  setToPosition(x, y = this.y) {
     this.x = x;
     this.y = y;
   }

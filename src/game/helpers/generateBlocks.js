@@ -1,10 +1,11 @@
 import Block from '@/game/objects/Block';
+import levels from '@/game/levels';
 import { randomInteger } from '@/game/helpers/math';
 
-export default (scene, blockWidth, blockMargin) => {
+export default (scene, level, blockWidth, blockMargin) => {
   const blocks = scene.physics.add.staticGroup();
 
-  scene.levels[0].forEach((row, rowIndex) => {
+  levels[level].forEach((row, rowIndex) => {
     const rowWidth = row.length;
     row.forEach((block, blockIndex) => {
       if (block) {

@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-column">
-    <v-button @click="startGame">Start</v-button>
+    <v-button @click="startGame">New Game</v-button>
+    <v-button @click="levelScreen">Levels</v-button>
   </div>
 </template>
 
@@ -13,8 +14,11 @@ export default {
   },
   methods: {
     startGame() {
-      game.scene.start('PlayScene');
+      game.scene.start('PlayScene', { level: 0 });
       this.$router.push('play');
+    },
+    levelScreen() {
+      this.$router.push('levels');
     }
   }
 };
